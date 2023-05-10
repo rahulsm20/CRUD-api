@@ -1,11 +1,11 @@
-import express from 'express';
+const express =require( 'express');
 const router = express.Router()
-import {addHandler, getHandler, updateHandler, deleteHandler, getAllUsersHandler }  from '../controllers/users.js'
+const {addHandler, getHandler, updateHandler, deleteHandler, getAllUsersHandler }=require('../controllers/users.js')
 
-router.put('/update/:id',updateHandler)
-router.delete('/delete/:id',deleteHandler)
+router.put('/:id',updateHandler)
+router.delete('/:id',deleteHandler)
 router.get('/:id',getHandler)
 router.post('/',addHandler);
 router.get('/',getAllUsersHandler)
 
-export default router
+module.exports= router

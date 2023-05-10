@@ -1,5 +1,5 @@
-import { connect, client } from '../db/connect.js';
-import {schema} from '../db/schemas.js'
+const { connect, client } = require('../db/connect.js');
+const {schema} = require('../db/schemas.js')
 
 
 const idValidator = /^[0-9A-Z]{26}$/;
@@ -81,4 +81,4 @@ async function deleteUser(id) {
   }
 }
 
-export {addUser, getUser, updateUser, deleteUser,getAllUsers}
+module.exports= {addUser, getUser, updateUser, deleteUser,getAllUsers}

@@ -1,13 +1,13 @@
-import express from 'express'
+const express =require('express')
 const app=express()
-import {connect}  from './db/connect.js'
-import users from './routes/users.js'
+const {connect} = require('./db/connect.js')
+const users =require( './routes/users.js')
 app.use(express.json());
 
 app.listen(5000,()=>console.log('Running on port 5000'))
 
 try{
-    await connect();
+    connect();
     console.log('Connected to DB')  
 }
 catch{
@@ -17,4 +17,4 @@ catch{
 app.use('/api/users',users)
 app.use('*',(req,res)=>res.status(404).json("Resource doesn't exist"))
 
-export default app
+module.exports= app

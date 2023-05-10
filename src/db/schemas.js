@@ -1,5 +1,5 @@
-import { Entity, Schema } from 'redis-om';
-import {connect,client} from './connect.js'
+const { Entity, Schema } = require('redis-om');
+const {connect,client} = require('./connect.js');
 class User extends Entity {}
 const schema = new Schema(
   User,
@@ -12,9 +12,10 @@ const schema = new Schema(
     dataStructure: 'JSON',
   }
 );
-
-await connect();
-const repository = client.fetchRepository(schema);
-await repository.createIndex();
-
-export {schema};
+// const createIndex=async()=>{
+   connect();
+  const repository = client.fetchRepository(schema);
+   repository.createIndex();  
+// }
+// createIndex()
+module.exports= {schema};
