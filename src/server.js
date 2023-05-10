@@ -3,8 +3,8 @@ const app=express()
 const {connect} = require('./db/connect.js')
 const users =require( './routes/users.js')
 app.use(express.json());
-
-app.listen(5000,()=>console.log('Running on port 5000'))
+require('dotenv').config();
+app.listen(process.env.PORT,()=>console.log(`Running on port ${process.env.PORT}`))
 
 try{
     connect();

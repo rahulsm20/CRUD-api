@@ -59,7 +59,7 @@ const { addUser, deleteUser, getUser, updateUser,getAllUsers } =require("../lib/
             res.status(400).json(user)
         }
         else{
-            res.status(204).json(user)
+            res.status(204).json(`User ${req.params.id} deleted`)
         }
     }
     catch(err){
