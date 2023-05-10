@@ -76,3 +76,13 @@ To run the tests, run the following command:
 ```
 npm test
 ```
+
+## Running on your local machine
+1. Clone this repo  
+``` git clone https://github.com/rahulsm20/CRUD-api ```
+2. Enter into the folder  
+   ``` cd CRUD-api```
+3. Install packages  
+   ``` npm i``` or ```npm install```
+4. Run in production mode  
+   ``` npm run start:prod```
