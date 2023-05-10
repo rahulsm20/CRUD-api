@@ -1,7 +1,33 @@
 # User API
 
 This is a simple REST API for managing users. It allows creating, updating, retrieving, and deleting user objects.
+## Content 
+1. [Tech stack](#tech-stack)
+2. [Steps to run locally](#running-on-your-local-machine)
+3. [Endpoints](#endpoints)
+4. [Testing](#testing)
 
+### Tech stack 
+* Node.js
+* ExpressJS
+* Database
+  * Redis
+* Testing
+  * Jest
+  * Supertest
+  * 
+## Running on your local machine
+1. Clone this repo  
+```git clone https://github.com/rahulsm20/CRUD-api ```
+2. Enter into the folder  
+   ```cd CRUD-api```
+3. Install packages  
+   ```npm i``` or ```npm install```
+4. Define environment variables
+   * Redis instance connection URL as REDIS_URL 
+   * Port on which you want to run your server as PORT
+5. Run in production mode  
+   ```npm run start:prod```
 ## Endpoints
 
 ### `GET /api/users`
@@ -76,13 +102,3 @@ To run the tests, run the following command:
 ```
 npm test
 ```
-
-## Running on your local machine
-1. Clone this repo  
-``` git clone https://github.com/rahulsm20/CRUD-api ```
-2. Enter into the folder  
-   ``` cd CRUD-api```
-3. Install packages  
-   ``` npm i``` or ```npm install```
-4. Run in production mode  
-   ``` npm run start:prod```
