@@ -15,7 +15,7 @@ This is a simple REST API for managing users. It allows creating, updating, retr
 * Testing
   * Jest
   * Supertest
-  * 
+  
 ## Running on your local machine
 1. Clone this repo  
 ```git clone https://github.com/rahulsm20/CRUD-api ```
@@ -26,8 +26,13 @@ This is a simple REST API for managing users. It allows creating, updating, retr
 4. Define environment variables
    * Redis instance connection URL as REDIS_URL 
    * Port on which you want to run your server as PORT
-5. Run in production mode  
-   ```npm run start:prod```
+5. There are multiple modes you can run the server in 
+   * Run in production mode  
+      ```npm run start:prod```
+   * Run in development mode  
+      ```npm run start:dev```
+   * Run multiple instances  
+      ```npm run start:multi``` 
 ## Endpoints
 
 ### `GET /api/users`
@@ -102,3 +107,7 @@ To run the tests, run the following command:
 ```
 npm test
 ```
+
+Sample result
+
+![sample-test](https://github.com/rahulsm20/CRUD-api/assets/77540672/e122fe2d-c903-4b73-89ea-e29f68677813)
